@@ -13,7 +13,7 @@ func TestMainOutput(t *testing.T) {
 
     // Capture the stdout
     var buf bytes.Buffer
-    os.Stdout = &buf
+    os.Stdout = buf.Bytes()
 
     // Call the main function
     main()
